@@ -51,6 +51,15 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".BloodPressureTestActivity"
+            android:label="Blood Pressure Test" >
+            <intent-filter>
+                <action android:name="com.docinabag.myapplication2.BloodPressureTestActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

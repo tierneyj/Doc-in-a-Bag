@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.docinabag.myapplication2.BloodPressureTestActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Enter Patient&apos;s Blood Pressure"
+        android:id="@+id/bloodPressureLabel"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/overTextField"
+        android:layout_below="@+id/bloodPressureLabel"
+        android:layout_centerHorizontal="true"
+        android:width="200dp"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="over"
+        android:id="@+id/overLabel"
+        android:layout_below="@+id/overTextField"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/underTextField"
+        android:layout_below="@+id/overLabel"
+        android:layout_centerHorizontal="true"
+        android:width="200dp"
+        android:inputType="number"
+        android:textAlignment="center" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter"
+        android:id="@+id/bloodPressureEnterButton"
+        android:layout_below="@+id/underTextField"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"/>
+</RelativeLayout>

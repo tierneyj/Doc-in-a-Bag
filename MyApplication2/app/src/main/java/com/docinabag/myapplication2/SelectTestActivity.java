@@ -20,6 +20,7 @@ public class SelectTestActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_test);
         glucoseTestButtonListener();
+        bloodPressureTestButtonListener();
     }
 
     public void glucoseTestButtonListener() {
@@ -29,6 +30,19 @@ public class SelectTestActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent("com.docinabag.myapplication2.GlucoseTestActivity");
+                        startActivity(intent);
+                    }
+                }
+        );
+    }
+
+    public void bloodPressureTestButtonListener() {
+        bloodPressureTestButton_sbm = (Button)findViewById(R.id.bloodPressureTestButton);
+        bloodPressureTestButton_sbm.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent("com.docinabag.myapplication2.BloodPressureTestActivity");
                         startActivity(intent);
                     }
                 }

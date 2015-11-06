@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Measure Patient&apos;s Blood Sugar"
+        android:text="Enter Patient&apos;s Blood Sugar"
         android:id="@+id/glucoseLabel"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -22,18 +22,19 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/editText3"
+        android:id="@+id/glucoseTextField"
         android:layout_below="@+id/glucoseLabel"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:width="200dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Enter"
         android:id="@+id/enterButton"
-        android:layout_below="@+id/editText3"
+        android:layout_below="@+id/glucoseTextField"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp" />
 </RelativeLayout>
