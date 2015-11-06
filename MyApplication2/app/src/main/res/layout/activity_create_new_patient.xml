@@ -58,7 +58,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Date Of Birth:(mm/dd/yyyy)"
+            android:text="Date Of Birth: (mm/dd/yyyy)"
             android:id="@+id/dobLabel"
             android:layout_below="@+id/lastNameTextField"
             android:layout_alignParentLeft="true"
@@ -129,7 +129,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Height:"
+            android:text="Height: (lbs.)"
             android:id="@+id/heightLabel"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
@@ -143,13 +143,14 @@
             android:layout_below="@+id/heightLabel"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:width="320dp" />
+            android:width="320dp"
+            android:inputType="number|numberDecimal" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Weight:"
+            android:text="Weight: (in.)"
             android:id="@+id/weightLabel"
             android:layout_below="@+id/editText"
             android:layout_alignParentLeft="true"
@@ -163,17 +164,57 @@
             android:layout_below="@+id/weightLabel"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:width="320dp" />
+            android:width="320dp"
+            android:inputType="number|numberDecimal" />
 
-        <Button
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Create"
-            android:id="@+id/createButton"
-            android:layout_gravity="center"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Sex:"
+            android:id="@+id/sexLabel"
             android:layout_below="@+id/editText2"
-            android:layout_centerHorizontal="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
             android:layout_marginTop="25dp" />
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/sexLabel"
+            android:layout_marginTop="10dp">
+
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:id="@+id/femaleRadio"
+                android:checked="false"
+                android:layout_below="@+id/sexLabel"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:id="@+id/maleRadio"
+                android:checked="false"
+                android:allowUndo="false"
+                android:layout_alignParentBottom="true"
+                android:layout_alignRight="@+id/editText2"
+                android:layout_alignEnd="@+id/editText2" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create"
+                android:id="@+id/createButton"
+                android:layout_gravity="center_horizontal"
+                android:layout_below="@id/sexLabel" />
+        </RadioGroup>
 
     </RelativeLayout>
 </ScrollView>
