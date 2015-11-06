@@ -8,6 +8,7 @@
         android:label="Open EMR Test"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
+
         <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -15,24 +16,48 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".CreateNewPatientActivity"
-            android:label="Creat New Patient Record" >
+            android:label="Create New Patient Record" >
             <intent-filter>
                 <action android:name="com.docinabag.myapplication2.CreateNewPatientActivity" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".SearchForPaitentActivity"
-            android:label="Search For Patient Record">
+            android:label="Search For Patient Record" >
             <intent-filter>
                 <action android:name="com.docinabag.myapplication2.SearchForPaitentActivity" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".SelectTestActivity"
+            android:label="Available Tests" >
+            <intent-filter>
+                <action android:name="com.docinabag.myapplication2.SelectTestActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".GlucoseTestActivity"
+            android:label="Glucose Test"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="com.docinabag.myapplication2.GlucoseTestActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>
