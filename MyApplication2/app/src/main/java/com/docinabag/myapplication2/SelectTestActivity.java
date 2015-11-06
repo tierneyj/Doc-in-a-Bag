@@ -21,6 +21,7 @@ public class SelectTestActivity extends AppCompatActivity {
         setContentView(R.layout.activity_select_test);
         glucoseTestButtonListener();
         bloodPressureTestButtonListener();
+        cholesterolTestButtonListener();
     }
 
     public void glucoseTestButtonListener() {
@@ -43,6 +44,19 @@ public class SelectTestActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent("com.docinabag.myapplication2.BloodPressureTestActivity");
+                        startActivity(intent);
+                    }
+                }
+        );
+    }
+
+    public void cholesterolTestButtonListener() {
+        cholesterolTestButton_sbm = (Button)findViewById(R.id.cholesterolTestButton);
+        cholesterolTestButton_sbm.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent("com.docinabag.myapplication2.CholesterolTestActivity");
                         startActivity(intent);
                     }
                 }

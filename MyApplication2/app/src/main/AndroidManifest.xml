@@ -60,6 +60,15 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".CholesterolTestActivity"
+            android:label="Cholesterol Test" >
+            <intent-filter>
+                <action android:name="com.docinabag.myapplication2.CholesterolTestActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
