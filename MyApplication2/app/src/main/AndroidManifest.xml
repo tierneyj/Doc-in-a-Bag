@@ -8,7 +8,6 @@
         android:label="Open EMR Test"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-
         <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,7 +15,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".CreateNewPatientActivity"
             android:label="Create New Patient Record" >
@@ -26,7 +24,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".SearchForPaitentActivity"
             android:label="Search For Patient Record" >
@@ -36,7 +33,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".SelectTestActivity"
             android:label="Available Tests" >
@@ -46,18 +42,15 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".GlucoseTestActivity"
-            android:label="Glucose Test"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:label="Glucose Test" >
             <intent-filter>
                 <action android:name="com.docinabag.myapplication2.GlucoseTestActivity" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
