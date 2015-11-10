@@ -129,7 +129,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Height: (lbs.)"
+            android:text="Height: (in.)"
             android:id="@+id/heightLabel"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
@@ -139,7 +139,7 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/editText"
+            android:id="@+id/heightTextField"
             android:layout_below="@+id/heightLabel"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
@@ -150,9 +150,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Weight: (in.)"
+            android:text="Weight: (lbs.)"
             android:id="@+id/weightLabel"
-            android:layout_below="@+id/editText"
+            android:layout_below="@+id/heightTextField"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_marginTop="25dp" />
@@ -160,7 +160,7 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/editText2"
+            android:id="@+id/weightTextField"
             android:layout_below="@+id/weightLabel"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
@@ -173,7 +173,7 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Sex:"
             android:id="@+id/sexLabel"
-            android:layout_below="@+id/editText2"
+            android:layout_below="@+id/weightTextField"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_marginTop="25dp" />
@@ -204,8 +204,8 @@
                 android:checked="false"
                 android:allowUndo="false"
                 android:layout_alignParentBottom="true"
-                android:layout_alignRight="@+id/editText2"
-                android:layout_alignEnd="@+id/editText2" />
+                android:layout_alignRight="@+id/weightTextField"
+                android:layout_alignEnd="@+id/weightTextField" />
 
             <Button
                 android:layout_width="wrap_content"

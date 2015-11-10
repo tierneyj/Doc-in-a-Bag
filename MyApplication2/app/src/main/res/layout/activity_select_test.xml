@@ -15,7 +15,7 @@
         android:id="@+id/selectTestButton"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp" />
+        android:layout_marginTop="60dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -44,6 +44,16 @@
         android:text="Cholesterol"
         android:id="@+id/cholesterolTestButton"
         android:layout_below="@+id/bloodPressureTestButton"
+        android:layout_centerHorizontal="true"
+        android:width="200dp"
+        android:layout_marginTop="25dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/submitButton"
+        android:layout_below="@+id/cholesterolTestButton"
         android:layout_centerHorizontal="true"
         android:width="200dp"
         android:layout_marginTop="25dp"/>

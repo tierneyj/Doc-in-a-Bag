@@ -11,10 +11,31 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Search"
-        android:id="@+id/textView"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Enter Patient ID"
+        android:id="@+id/uidLabel"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="73dp" />
+        android:layout_marginTop="25dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/uidTextField"
+        android:layout_below="@id/uidLabel"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+        android:width="150dp"
+        android:inputType="number|numberDecimal"
+        android:textAlignment="center" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:id="@+id/searchButton"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/uidTextField"
+        android:layout_marginTop="25dp"/>
+
 </RelativeLayout>
