@@ -32,7 +32,10 @@ public class CholesterolTestActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        newPatient.setCholesterol(Integer.parseInt(cholesterol_input.getText().toString()));
+                        if (cholesterol_input.getText().toString().matches("")) {
+                        } else {
+                            newPatient.setCholesterol(Integer.parseInt(cholesterol_input.getText().toString()));
+                        }
                         Intent intent = new Intent("com.docinabag.myapplication2.SelectTestActivity");
                         Bundle bundle = new Bundle();
                         bundle.putSerializable(SER_KEY, newPatient);

@@ -32,7 +32,10 @@ public class GlucoseTestActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        newPatient.setGlucose(Integer.parseInt(glucose_input.getText().toString()));
+                        if (glucose_input.getText().toString().matches("")){
+                        } else {
+                            newPatient.setGlucose(Integer.parseInt(glucose_input.getText().toString()));
+                        }
                         Intent intent = new Intent("com.docinabag.myapplication2.SelectTestActivity");
                         Bundle bundle = new Bundle();
                         bundle.putSerializable(SER_KEY, newPatient);

@@ -26,6 +26,10 @@ public class PatientRecord implements Serializable {
         return sex;
     }
 
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
     public String getUri() { return uri; }
 
     public String getDob() { return dob; }

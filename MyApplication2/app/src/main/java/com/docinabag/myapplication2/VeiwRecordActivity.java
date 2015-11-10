@@ -1,13 +1,10 @@
 package com.docinabag.myapplication2;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.TextView;
 
-public class PatientRecordActivity extends AppCompatActivity {
-
+public class VeiwRecordActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,13 +21,11 @@ public class PatientRecordActivity extends AppCompatActivity {
         TextView textViewCholesterol = (TextView)findViewById(R.id.textViewCholesterol);
         TextView textViewPulse = (TextView)findViewById(R.id.textViewPulse);
         TextView textViewBloodPressure = (TextView)findViewById(R.id.textViewBloodPresure);
-        TextView textViewSex = (TextView)findViewById(R.id.textViewSex);
 
 
 
         textViewName.setText(newPatient.getFirstName() + " " + newPatient.getLastName());
         textViewDOB.setText(newPatient.getMonth() + "/" + newPatient.getDay() + "/" + newPatient.getYear());
-        textViewSex.setText(newPatient.getSex());
         if (newPatient.getHeight() == null) {
         } else {
             textViewHeight.setText(Integer.toString(newPatient.getHeight()) + " in.");
@@ -52,6 +47,8 @@ public class PatientRecordActivity extends AppCompatActivity {
             textViewBloodPressure.setText(Integer.toString(newPatient.getBloodPressureOver()) + "/" + Integer.toString(newPatient.getBloodPressureUnder()));
         }
         textViewPulse.setText("(N/A)");
+
+
 
     }
 }

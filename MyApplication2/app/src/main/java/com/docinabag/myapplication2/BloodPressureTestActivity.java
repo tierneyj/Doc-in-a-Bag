@@ -36,8 +36,16 @@ public class BloodPressureTestActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        newPatient.setBloodPressureOver(Integer.parseInt(bloodPressureOver_input.getText().toString()));
-                        newPatient.setBloodPressureUnder(Integer.parseInt(bloodPressureUnder_input.getText().toString()));
+                        if (bloodPressureOver_input.getText().toString().matches("")) {
+                        } else
+                        {
+                            newPatient.setBloodPressureOver(Integer.parseInt(bloodPressureOver_input.getText().toString()));
+                        }
+                        if (bloodPressureUnder_input.getText().toString().matches("")) {
+
+                        } else {
+                            newPatient.setBloodPressureUnder(Integer.parseInt(bloodPressureUnder_input.getText().toString()));
+                        }
                         Intent intent = new Intent("com.docinabag.myapplication2.SelectTestActivity");
                         Bundle bundle = new Bundle();
                         bundle.putSerializable(SER_KEY, newPatient);

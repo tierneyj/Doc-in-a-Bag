@@ -194,7 +194,8 @@
                 android:checked="false"
                 android:layout_below="@+id/sexLabel"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+                android:layout_alignParentStart="true"
+                android:onClick="onRadioButtonClicked"/>
 
             <RadioButton
                 android:layout_width="wrap_content"
@@ -205,7 +206,8 @@
                 android:allowUndo="false"
                 android:layout_alignParentBottom="true"
                 android:layout_alignRight="@+id/weightTextField"
-                android:layout_alignEnd="@+id/weightTextField" />
+                android:layout_alignEnd="@+id/weightTextField"
+                android:onClick="onRadioButtonClicked"/>
 
             <Button
                 android:layout_width="wrap_content"

@@ -6,7 +6,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.docinabag.myapplication2.PatientRecordActivity">
+    tools:context="com.docinabag.myapplication2.VeiwRecordActivity">
 
     <TextView
         android:layout_width="wrap_content"
@@ -35,7 +35,6 @@
         android:layout_toRightOf="@+id/nameLabel"
         android:layout_alignTop="@id/nameLabel"/>
 
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -57,26 +56,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Sex: "
-        android:id="@+id/sexLabel"
-        android:layout_below="@id/dobLabel"
-        android:layout_marginTop="10dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:id="@+id/textViewSex"
-        android:layout_toRightOf="@+id/sexLabel"
-        android:layout_alignTop="@id/sexLabel"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Height: "
         android:id="@id/heightLabel"
-        android:layout_below="@id/sexLabel"
+        android:layout_below="@id/dobLabel"
         android:layout_marginTop="10dp"/>
 
     <TextView
@@ -177,7 +159,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Upload"
+        android:text="Begin Testing"
         android:id="@+id/uploadButton"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/pulseLabel"

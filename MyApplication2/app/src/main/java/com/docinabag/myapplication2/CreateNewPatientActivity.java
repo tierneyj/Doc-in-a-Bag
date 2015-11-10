@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 
 public class CreateNewPatientActivity extends AppCompatActivity {
 
@@ -51,8 +52,15 @@ public class CreateNewPatientActivity extends AppCompatActivity {
                         newPatient.setMonth(month_input.getText().toString());
                         newPatient.setDay(day_input.getText().toString());
                         newPatient.setYear(year_input.getText().toString());
-                        newPatient.setHeight(Integer.parseInt(height_input.getText().toString()));
-                        newPatient.setWeight(Integer.parseInt(weight_input.getText().toString()));
+                        if (height_input.getText().toString().matches("")) {
+                        } else {
+                            newPatient.setHeight(Integer.parseInt(height_input.getText().toString()));
+                        }
+
+                        if (weight_input.getText().toString().matches("")) {
+                        } else {
+                            newPatient.setWeight(Integer.parseInt(weight_input.getText().toString()));
+                        }
 
                         //create new intents intent is next screen intent2 is where data is going
                         Intent intent = new Intent("com.docinabag.myapplication2.SelectTestActivity");
@@ -66,5 +74,22 @@ public class CreateNewPatientActivity extends AppCompatActivity {
                     }
                 }
         );
+    }
+
+    public void onRadioButtonClicked(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        // Check which radio button was clicked
+        switch(view.getId()) {
+            case R.id.maleRadio:
+                if (checked)
+                    newPatient.setSex("Male");
+                    break;
+            case R.id.femaleRadio:
+                if (checked)
+                    newPatient.setSex("Female");
+                    break;
+        }
     }
 }

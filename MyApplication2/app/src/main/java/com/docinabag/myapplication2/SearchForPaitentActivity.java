@@ -28,10 +28,21 @@ public class SearchForPaitentActivity extends AppCompatActivity {
 
     private String uid;
 
+    public patientContainer newPatient;
+
+    public Button button;
+
+    public  final static String SER_KEY = "com.docinabag.myapplication2.ser";
+
+    public TextView patientLabel;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_for_paitent);
+        button = (Button)findViewById(R.id.button3);
+        patientLabel = (TextView)findViewById(R.id.patientFound);
+        button.setVisibility(View.GONE);
         searchButtonListener();
     }
 
@@ -57,7 +68,7 @@ public class SearchForPaitentActivity extends AppCompatActivity {
                 final String url = ("http://52.32.30.227:5000/openemr/api/v0.0/patients/" + uid);
                 RestTemplate restTemplate = new RestTemplate();
                 restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
-                patientContainer newPatient = restTemplate.getForObject(url, patientContainer.class);
+                newPatient = restTemplate.getForObject(url, patientContainer.class);
                 return newPatient;
             } catch (Exception e) {
                 Log.e("MainActivity", e.getMessage(), e);
@@ -68,12 +79,29 @@ public class SearchForPaitentActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(patientContainer newPatient) {
-            TextView greetingIdText = (TextView) findViewById(R.id.textView);
-            TextView greetingContentText = (TextView) findViewById(R.id.textView2);
-            greetingIdText.setText(newPatient.getPatient().getId());
-            greetingContentText.setText(newPatient.getPatient().getFirstName());
-            Button button = (Button)findViewById(R.id.button3);
-            button.setText(newPatient.getPatient().getFirstName() + " " + newPatient.getPatient().getLastName());
+            button.setVisibility(View.VISIBLE);
+            patientLabel.setText("Patient Found");
+            button.setText("Begin Testing For " + newPatient.getPatient().getFirstName() + " " + newPatient.getPatient().getLastName());
+            newPatient.getPatient().setMonth((newPatient.getPatient().getDob()).substring(0,2));
+            newPatient.getPatient().setDay((newPatient.getPatient().getDob()).substring(3,5));
+            newPatient.getPatient().setYear((newPatient.getPatient().getDob()).substring(6,10));
+            buttonButtonListener();
+        }
+
+        public void buttonButtonListener() {
+            button.setOnClickListener(
+                    new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent("com.docinabag.myapplication2.SelectTestActivity");
+                            Bundle bundle = new Bundle();
+                            bundle.putSerializable(SER_KEY, newPatient.getPatient());
+                            intent.putExtras(bundle);
+                            startActivity(intent);
+
+                        }
+                    }
+            );
         }
 
     }
