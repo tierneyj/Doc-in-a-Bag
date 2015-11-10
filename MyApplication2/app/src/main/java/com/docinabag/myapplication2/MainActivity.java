@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         createButtonListener();
         searchButtonListener();
-    }
+}
 
     public void createButtonListener() {
         create_sbm = (Button)findViewById(R.id.button);

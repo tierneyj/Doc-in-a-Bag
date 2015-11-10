@@ -3,6 +3,8 @@ package com.docinabag.myapplication2;
 import java.io.Serializable;
 
 public class PatientRecord implements Serializable {
+    public String id;
+    public String content;
     String firstName;
     String lastName;
     String month;
@@ -14,6 +16,7 @@ public class PatientRecord implements Serializable {
     Integer cholesterol;
     Integer bloodPressureOver;
     Integer bloodPressureUnder;
+
 
     public String getFirstName() {
         return firstName;
@@ -101,6 +104,14 @@ public class PatientRecord implements Serializable {
 
     public void setBloodPressureUnder(Integer bloodPressureUnder) {
         this.bloodPressureUnder = bloodPressureUnder;
+    }
+
+    public String getId() {
+        return this.id;
+    }
+
+    public String getContent() {
+        return this.content;
     }
 }
 
