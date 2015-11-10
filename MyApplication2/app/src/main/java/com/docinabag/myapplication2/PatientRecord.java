@@ -1,15 +1,20 @@
 package com.docinabag.myapplication2;
 
 import java.io.Serializable;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class PatientRecord implements Serializable {
     public String id;
+    public String uri;
     public String content;
     String firstName;
     String lastName;
     String month;
     String day;
     String year;
+    String dob;
+    String sex;
     Integer height;
     Integer weight;
     Integer glucose;
@@ -17,6 +22,13 @@ public class PatientRecord implements Serializable {
     Integer bloodPressureOver;
     Integer bloodPressureUnder;
 
+    public String getSex() {
+        return sex;
+    }
+
+    public String getUri() { return uri; }
+
+    public String getDob() { return dob; }
 
     public String getFirstName() {
         return firstName;
@@ -107,7 +119,13 @@ public class PatientRecord implements Serializable {
     }
 
     public String getId() {
-        return this.id;
+        char a = uri.charAt(uri.length() - 1);
+        id = Character.toString(a);
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getContent() {
