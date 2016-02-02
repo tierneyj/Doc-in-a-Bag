@@ -65,7 +65,7 @@ public class SearchForPaitentActivity extends AppCompatActivity {
         @Override
         protected patientContainer doInBackground(Void... params) {
             try {
-                final String url = ("http://52.32.30.227:5000/openemr/api/v0.0/patients/" + uid);
+                final String url = ("http://52.34.73.235:5000/openemr/api/v0.0/patients/" + uid);
                 RestTemplate restTemplate = new RestTemplate();
                 restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
                 newPatient = restTemplate.getForObject(url, patientContainer.class);
