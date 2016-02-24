@@ -2,60 +2,185 @@
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.docinabag.myapplication2.SearchForPaitentActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Enter Patient ID"
-        android:id="@+id/uidLabel"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recordView">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/uidTextField"
-        android:layout_below="@id/uidLabel"
-        android:layout_marginTop="25dp"
-        android:layout_centerHorizontal="true"
-        android:width="150dp"
-        android:inputType="number|numberDecimal"
-        android:textAlignment="center" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Name: "
+            android:id="@+id/nameLabel"
+            android:layout_below="@id/titleLabel"
+            android:layout_marginTop="10dp"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Search"
-        android:id="@+id/searchButton"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/uidTextField"
-        android:layout_marginTop="25dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textView_firstName"
+            android:layout_toRightOf="@+id/nameLabel"
+            android:layout_alignTop="@id/nameLabel"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:id="@+id/patientFound"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:layout_below="@id/searchButton" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Date Of Birth: "
+            android:id="@+id/dobLabel"
+            android:layout_below="@id/nameLabel"
+            android:layout_marginTop="10dp"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button3"
-        android:layout_below="@id/patientFound"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_marginTop="25dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textViewDOB"
+            android:layout_toRightOf="@+id/dobLabel"
+            android:layout_alignTop="@id/dobLabel"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Social Security: "
+            android:id="@+id/ssLabel"
+            android:layout_below="@id/dobLabel"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textViewSS"
+            android:layout_toRightOf="@id/ssLabel"
+            android:layout_alignTop="@id/ssLabel"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Email: "
+            android:id="@+id/emailLabel"
+            android:layout_below="@id/ssLabel"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textViewEmail"
+            android:layout_toRightOf="@+id/emailLabel"
+            android:layout_alignTop="@+id/emailLabel"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Gender: "
+            android:id="@+id/genderLabel"
+            android:layout_below="@id/emailLabel"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textViewGender"
+            android:layout_toRightOf="@+id/genderLabel"
+            android:layout_alignTop="@+id/genderLabel"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Marital Status: "
+            android:id="@+id/statusLabel"
+            android:layout_below="@+id/genderLabel"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textViewStatus"
+            android:layout_toRightOf="@+id/statusLabel"
+            android:layout_alignTop="@+id/statusLabel"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send Email"
+            android:id="@+id/uploadButton"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/statusLabel"
+            android:layout_marginTop="25dp"/>
+
+    </RelativeLayout>
 
 
+    <RelativeLayout
+        android:id="@+id/initialView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Enter Patient ID"
+            android:id="@+id/uidLabel"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/uidTextField"
+            android:layout_below="@id/uidLabel"
+            android:layout_marginTop="25dp"
+            android:layout_centerHorizontal="true"
+            android:width="150dp"
+            android:inputType="number|numberDecimal"
+            android:textAlignment="center" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:id="@+id/searchButton"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/uidTextField"
+            android:layout_marginTop="25dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/patientFound"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:layout_below="@id/searchButton" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button3"
+            android:layout_below="@id/patientFound"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="25dp"/>
+
+    </RelativeLayout>
 
 </RelativeLayout>
